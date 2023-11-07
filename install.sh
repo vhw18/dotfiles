@@ -28,7 +28,7 @@ sudo ln -fs /usr/share/zoneinfo/Europe/Oslo /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 # install packages
-sudo apt install exa
+sudo apt install exa -y
 
 zshrc
 
