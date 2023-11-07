@@ -1,0 +1,15 @@
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+*.code-workspace
+.history/
+
+### macOS excluded file types ###
+.DS_Store
+
+### MegaLinter reports ###
+megalinter-reports/
