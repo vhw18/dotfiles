@@ -28,7 +28,13 @@ sudo ln -fs /usr/share/zoneinfo/Europe/Oslo /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 # install packages
+# exa (deprecated)
 curl -L https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip --output /tmp/exa-linux.zip && unzip /tmp/exa-linux.zip -d /tmp/exa-linux/ && sudo mv /tmp/exa-linux/bin/exa /usr/local/bin/ && sudo mv /tmp/exa-linux/man/exa.1 /usr/share/man/man1/ && sudo mv /tmp/exa-linux/completions/exa.zsh /usr/local/share/zsh/site-functions/
+# eza (exa successor)
+# curl -L https://github.com/eza-community/eza/releases/download/v0.18.16/eza_x86_64-unknown-linux-gnu.zip --output /tmp/eza-linux.zip
+# curl -L https://github.com/eza-community/eza/releases/download/v0.18.16/man-0.18.16.tar.gz /tmp/eza-man.tar.gz
+# Azure CLI
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 zshrc
 
