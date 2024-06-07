@@ -41,6 +41,17 @@ curl -L https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-
 ## Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
+# Configure fonts
+# Hack Nerd Font
+mkdir -p "$HOME"/fontinstall
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip --output-document "$HOME"/fontinstall/Hack.zip
+unzip "$HOME"/fontinstall/Hack.zip -d "$HOME"/fontinstall/HackNerdFont
+sudo mkdir -p /usr/local/share/fonts/hack-nerd-font
+sudo cp "$HOME"/fontinstall/HackNerdFont/*.ttf /usr/local/share/fonts/hack-nerd-font/
+sudo fc-cache -fv
+rm -rf "$HOME"/fontinstall/Hack.zip "$HOME"/fontinstall/HackNerdFont
+
+# Configure ZSH
 zshrc
 
 # Adjust path
