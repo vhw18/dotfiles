@@ -43,8 +43,6 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 zshrc
 
-source $HOME/.zshrc
-
 # Adjust path
 export PATH="$PATH":"$HOME"/dev/scripts
 
