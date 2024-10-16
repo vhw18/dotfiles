@@ -120,17 +120,20 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 TZ='Europe/Oslo'
 export TZ
 
 # Make alias for EXA ls replacement
-if [ -x "$(command -v exa)" ]; then
-    alias ls="exa"
-    alias la="exa --long --all --group"
+if [ -x "$(command -v eza)" ]; then
+    alias ls="eza --icons"
+    alias la="eza --long --all --group --header --group-directories-first --group --icons --time-style long-iso"
 fi
+
+alias tree="eza --tree"
+alias cat="bat -p"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Add directories to PATH
 export PATH=$HOME/.local/bin/:$PATH
